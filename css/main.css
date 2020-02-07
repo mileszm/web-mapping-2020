@@ -1,0 +1,93 @@
+/*bring in Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+/*crude reset*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/*main layout*/
+body {
+	font-size: 10px;
+	padding: 1rem;
+}
+h1 {
+  text-align: right;
+	color: darkgrey;
+	font-weight: 300;
+	font-size: 2.5rem;
+  font-family: poppins;
+  margin: 0.5rem 0;
+}
+@media screen and (min-width: 660px) {
+  #shelf {
+    display: flex;
+    justify-content: space-between;
+  }
+  #shelf > div {
+    width: calc(50% - 0.5rem);
+  }
+}
+#shelf > div {
+	padding: 1rem;
+	background: silver;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+}
+
+/*album selector side*/
+.album-list-item {
+  background: darkgrey;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.album-list-item:last-of-type {
+  margin-bottom: 0;
+}
+.album-list-item .artist {
+	color: darkcyan;
+	font-weight: 700;
+	font-size: 1.5rem;
+  font-family: Poppins;
+}
+.album-list-item .album-name {
+	color: white;
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-family: 'Roboto Condensed';
+}
+.album-list-item:hover {
+	background: gainsboro;
+	cursor: pointer;
+}
+.album-list-item:active {
+	background: white;
+	cursor: pointer;
+}
+.album-list-item:hover .album-name {
+	color: slategrey;
+}
+
+/*album art side*/
+#album-art-container {
+  order: -1;
+}
+#instructions {
+  text-align: center;
+	color: white;
+	font-weight: 700;
+	font-size: 1.5rem;
+  font-family: Poppins;
+  padding: 3rem;
+}
+#album-art {
+  display: none;
+	background-size: cover;
+  width: 100%;
+  padding: 50%;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  background-color: darkgrey;
+}
