@@ -21,6 +21,11 @@ var albumData = [
     albumArtist: 'Tyler the Creator',
     albumName: 'Flower Boy',
     albumCoverUrl: 'https://upload.wikimedia.org/wikipedia/en/c/c3/Tyler%2C_the_Creator_-_Flower_Boy.png'
+  },
+  {
+    albumArtist: 'Wu-Tang Clan',
+    albumName: 'Enter the Wu-Tang (36 Chambers)',
+    albumCoverUrl: 'https://upload.wikimedia.org/wikipedia/en/5/53/Wu-TangClanEntertheWu-Tangalbumcover.jpg'
   }
 ]
 
@@ -46,58 +51,3 @@ $('.album-list-item').on('click', function(){
 // set the background to the url
 	$('#album-art').css('background-image', `url(${albumCoverUrl})` )
 })
-
-
-
-// USING THE CONSOLE LOG TO LEARN ABOUT DATA TYPES
-
-// number
-var number = 3
-
-// string
-var name = 'Miles'
-
-// boolean
-var rainy = true
-
-console.log(number, typeof number)
-console.log(name, typeof name)
-console.log(rainy, typeof rainy)
-
-// operators
-console.log('opposite of rainy? ', !rainy)
-console.log('add 5?', number + 5)
-
-
-// loops
-var timesToRun = 10
-
-for (var i = 0; i <= timesToRun; i++) {
-  // this code block runs while the for expression is true
-  // it will run as long as i is less than or equal to the timesToRun var
-  console.log('counting down', timesToRun, 'times:', i)
-}
-
-// arrays
-var arrayOfStrings = ['Miles','no','why','help']
-
-var arrayOfNumbers = [12, 8, 9, 72]
-
-console.log('log the array:', arrayOfStrings)
-
-console.log(arrayOfStrings.length)
-
-console.log('get the 3rd item in the array', arrayOfStrings[2]) // 0 is first
-
-// iterate through array elements
-arrayOfStrings.forEach(
-  function(sayString) {
-    console.log(sayString)
-  }
-)
-
-console.log('mix two arrays:',arrayOfStrings[3], arrayOfNumbers[2])
-
-// template literal
-// back ticks `` contain $ template items
-console.log(`This combines the string ${arrayOfStrings[1]} and the number ${arrayOfNumbers[1]}`)
